@@ -697,8 +697,6 @@ window.Modernizr = (function( window, document, undefined ) {
     };
     /*>>fontface*/
 
-
-    
     // CSS generated content detection
     tests['generatedcontent'] = function() {
         var bool;
