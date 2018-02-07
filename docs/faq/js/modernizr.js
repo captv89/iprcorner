@@ -697,6 +697,10 @@ window.Modernizr = (function( window, document, undefined ) {
     };
     /*>>fontface*/
 
+    // Floating menu
+    $('.float-nav').click(function () {
+        $('.main-nav, .menu-btn').toggleClass('active');
+    });
     // CSS generated content detection
     tests['generatedcontent'] = function() {
         var bool;
