@@ -3,22 +3,27 @@
 Primary style
 
 -------------------------------- */
-*, *::after, *::before {
+
+*,
+*::after,
+*::before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-*::after, *::before {
+*::after,
+*::before {
   content: '';
 }
 
 body {
   font-size: 100%;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Nunito', sans-serif;
   color: #4e5359;
   background-color: #f3f3f5;
 }
+
 body::after {
   /* overlay layer visible on small devices when the right panel slides in */
   position: fixed;
@@ -33,6 +38,7 @@ body::after {
   -moz-transition: opacity .3s 0s, visibility 0s .3s;
   transition: opacity .3s 0s, visibility 0s .3s;
 }
+
 body.cd-overlay::after {
   visibility: visible;
   opacity: 1;
@@ -40,6 +46,7 @@ body.cd-overlay::after {
   -moz-transition: opacity .3s 0s, visibility 0s 0s;
   transition: opacity .3s 0s, visibility 0s 0s;
 }
+
 @media only screen and (min-width: 768px) {
   body::after {
     display: none;
@@ -56,6 +63,7 @@ a {
 Main components 
 
 -------------------------------- */
+
 header {
   position: relative;
   height: 140px;
@@ -63,6 +71,7 @@ header {
   text-align: center;
   background-color: #222;
 }
+
 header h1 {
   color: #fed136;
   -webkit-font-smoothing: antialiased;
@@ -70,6 +79,7 @@ header h1 {
   font-size: 20px;
   font-size: 1.25rem;
 }
+
 @media only screen and (min-width: 1024px) {
   header {
     height: 140px;
@@ -88,11 +98,13 @@ header h1 {
   margin: 2em auto;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
+
 .cd-faq:after {
   content: "";
   display: table;
   clear: both;
 }
+
 @media only screen and (min-width: 768px) {
   .cd-faq {
     position: relative;
@@ -116,7 +128,9 @@ header h1 {
   border-bottom: 1px solid #555b61;
   text-overflow: ellipsis;
 }
-.cd-faq-categories a::before, .cd-faq-categories a::after {
+
+.cd-faq-categories a::before,
+.cd-faq-categories a::after {
   /* plus icon on the right */
   position: absolute;
   top: 50%;
@@ -126,6 +140,7 @@ header h1 {
   width: 10px;
   background-color: #7f868e;
 }
+
 .cd-faq-categories a::after {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
@@ -133,9 +148,11 @@ header h1 {
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
+
 .cd-faq-categories li:last-child a {
   border-bottom: none;
 }
+
 @media only screen and (min-width: 768px) {
   .cd-faq-categories {
     width: 20%;
@@ -152,7 +169,8 @@ header h1 {
     -moz-transition: background 0.2s, padding 0.2s;
     transition: background 0.2s, padding 0.2s;
   }
-  .cd-faq-categories a::before, .cd-faq-categories a::after {
+  .cd-faq-categories a::before,
+  .cd-faq-categories a::after {
     display: none;
   }
   .no-touch .cd-faq-categories a:hover {
@@ -163,6 +181,7 @@ header h1 {
     margin-bottom: 2em;
   }
 }
+
 @media only screen and (min-width: 1024px) {
   .cd-faq-categories {
     position: absolute;
@@ -222,6 +241,7 @@ header h1 {
   -moz-transition: -moz-transform .3s;
   transition: transform .3s;
 }
+
 .cd-faq-items.slide-in {
   -webkit-transform: translateZ(0) translateX(0%);
   -moz-transform: translateZ(0) translateX(0%);
@@ -229,6 +249,7 @@ header h1 {
   -o-transform: translateZ(0) translateX(0%);
   transform: translateZ(0) translateX(0%);
 }
+
 .no-js .cd-faq-items {
   position: static;
   height: auto;
@@ -239,6 +260,7 @@ header h1 {
   -o-transform: translateX(0);
   transform: translateX(0);
 }
+
 @media only screen and (min-width: 768px) {
   .cd-faq-items {
     position: static;
@@ -255,6 +277,7 @@ header h1 {
     background: transparent;
   }
 }
+
 @media only screen and (min-width: 1024px) {
   .cd-faq-items {
     float: none;
@@ -289,7 +312,9 @@ header h1 {
   -moz-transition: right 0.4s;
   transition: right 0.4s;
 }
-.cd-close-panel::before, .cd-close-panel::after {
+
+.cd-close-panel::before,
+.cd-close-panel::after {
   /* close icon in CSS */
   position: absolute;
   top: 16px;
@@ -299,6 +324,7 @@ header h1 {
   width: 18px;
   background: #6c7d8e;
 }
+
 .cd-close-panel::before {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -306,6 +332,7 @@ header h1 {
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
 .cd-close-panel::after {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
@@ -313,9 +340,11 @@ header h1 {
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
+
 .cd-close-panel.move-left {
   right: 2%;
 }
+
 @media only screen and (min-width: 768px) {
   .cd-close-panel {
     display: none;
@@ -326,33 +355,38 @@ header h1 {
   /* hide group not selected */
   display: none;
 }
+
 .cd-faq-group.selected {
   display: block;
 }
+
 .cd-faq-group .cd-faq-title {
   background: transparent;
   box-shadow: none;
   margin: 1em 0;
 }
+
 .no-touch .cd-faq-group .cd-faq-title:hover {
   box-shadow: none;
 }
+
 .cd-faq-group .cd-faq-title h2 {
   text-transform: uppercase;
-  font-size: 12px;
-  font-size: 0.75rem;
+  font-size: 20px;
   font-weight: 700;
   color: #bbbbc7;
 }
+
 .no-js .cd-faq-group {
   display: block;
 }
+
 @media only screen and (min-width: 768px) {
   .cd-faq-group {
     /* all groups visible */
     display: block;
   }
-  .cd-faq-group > li {
+  .cd-faq-group>li {
     background: #ffffff;
     margin-bottom: 6px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
@@ -360,7 +394,7 @@ header h1 {
     -moz-transition: box-shadow 0.2s;
     transition: box-shadow 0.2s;
   }
-  .no-touch .cd-faq-group > li:hover {
+  .no-touch .cd-faq-group>li:hover {
     box-shadow: 0 1px 10px rgba(108, 125, 142, 0.3);
   }
   .cd-faq-group .cd-faq-title {
@@ -377,6 +411,7 @@ header h1 {
   margin: 1.6em 0 .4em;
   line-height: 1.2;
 }
+
 @media only screen and (min-width: 768px) {
   .cd-faq-trigger {
     font-size: 24px;
@@ -385,7 +420,8 @@ header h1 {
     margin: 0;
     padding: 24px 72px 24px 24px;
   }
-  .cd-faq-trigger::before, .cd-faq-trigger::after {
+  .cd-faq-trigger::before,
+  .cd-faq-trigger::after {
     /* arrow icon on the right */
     position: absolute;
     right: 24px;
@@ -439,6 +475,7 @@ header h1 {
   line-height: 1.4;
   color: #6c7d8e;
 }
+
 @media only screen and (min-width: 768px) {
   .cd-faq-content {
     display: none;
@@ -449,92 +486,5 @@ header h1 {
   }
   .no-js .cd-faq-content {
     display: block;
-  }
-}
-@import "compass/css3";
-.float-nav {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  z-index: 2;
-  >a.menu-btn {
-    text-decoration: none;
-    display: block;
-    background-color: #cc3333;
-    color: white;
-    padding: 17px 19px 12px 19px;
-    text-align: center;
-    box-shadow: 2px 2px 8px #777;
-    border-radius: 300px;
-    &.active {
-      transition: background-color 250ms linear;
-      background-color: transparent;
-      box-shadow: none;
-      >ul>li.line {
-        &:nth-child(1) {
-          border-width: 2px;
-          @include transform(rotate(45deg) translate(4px, 6px));
-        }
-        &:nth-child(2) {
-          visibility: hidden;
-        }
-        &:nth-child(3) {
-          border-width: 2px;
-          @include transform(rotate(-45deg) translate(8px, -10px));
-        }
-      }
-    }
-    >ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      >li.line {
-        border: 1px solid white;
-        width: 100%;
-        margin-bottom: 7px;
-        @include transition-duration(0.1s);
-      }
-    }
-    >.menu-txt {
-      width: 100%;
-      text-align: center;
-      font-size: 12px;
-      font-family: sans-serif;
-    }
-  }
-}
-
-.main-nav {
-  display: none;
-  opacity: 0;
-  font-family: sans-serif;
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  transition: opacity 250ms;
-  &.active {
-    display: block;
-    opacity: 1;
-    transition: opacity 250ms;
-  }
-  >ul {
-    width: 100%;
-    display: block;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    background-color: #cc3333;
-    box-shadow: 2px 2px 8px #777;
-    border-radius: 3px 3px 33.5px 3px;
-    >li>a {
-      text-decoration: none;
-      display: block;
-      font-weight: 200;
-      padding: 18px 80px 18px 18px;
-      color: white;
-      &:hover {
-        font-weight: 400;
-      }
-    }
   }
 }
